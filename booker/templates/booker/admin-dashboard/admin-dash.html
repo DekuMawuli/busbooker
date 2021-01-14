@@ -1,0 +1,139 @@
+{% extends 'site-base.html' %}
+
+{% block title %}Admin Panel{% endblock %}
+
+{% block content %}
+    {% include 'includes/booker/navbar.inc.html' %}
+    <section id="admin-dash-header" class="container">
+        <h4 class="mt-3">Bus Data</h4>
+        <hr>
+        <div class="row cards-row">
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="card box-pm">
+                  <div class="card-body">
+                    <h3 class="text-center card-title text-primary">
+                        Buses Enrolled Today
+                    </h3>
+                      <hr>
+                      <h3 class="text-center text-primary display-4">
+                          {{ buses.count }}
+                      </h3>
+                      <button type="button" class="btn btn-outline-primary btn-block" data-toggle="modal" data-target="#allBusesModal">
+                          More Details
+                        </button>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="card box-ss">
+                  <div class="card-body">
+                      <h3 class="text-center card-title text-success">
+                        Buses On Road Today
+                    </h3>
+                      <hr>
+                      <h3 class="text-center text-success display-4">
+                          {{ bor }}
+                      </h3>
+                      <button type="button" class="btn btn-outline-success btn-block" data-toggle="modal" data-target="#allBusesModal">
+                          More Details
+                        </button>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="card box-wn">
+                  <div class="card-body">
+                    <h3 class="text-center card-title text-warning">
+                        Buses Not On Road Today
+                    </h3>
+                      <hr>
+                      <h3 class="text-center text-warning display-4">
+                          {{ bnor }}
+                      </h3>
+                      <button type="button" class="btn btn-outline-warning btn-block" data-toggle="modal" data-target="#allBusesModal">
+                          More Details
+                        </button>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="card box-dg">
+                  <div class="card-body">
+                    <h3 class="text-center card-title text-danger">
+                        Buses With Fault Today
+                    </h3>
+                      <hr>
+                      <h3 class="text-center text-danger display-4">
+                          {{ fb }}
+                      </h3>
+                      <button type="button" class="btn btn-outline-danger btn-block" data-toggle="modal" data-target="#allBusesModal">
+                          More Details
+                        </button>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <hr id="hr-1">
+    <h4 class="mt-3">Driver Data</h4>
+        <hr>
+        <div class="row cards-row">
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="card box-pm">
+                  <div class="card-body">
+                    <h3 class="text-center card-title text-primary">
+                        Drivers Enrolled Today
+                    </h3>
+                      <hr>
+                      <h3 class="text-center text-primary display-4">
+                          {{ drivers.count }}
+                      </h3>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="card box-ss">
+                  <div class="card-body">
+                      <h3 class="text-center card-title text-success">
+                        Drivers On Trip Today
+                    </h3>
+                      <hr>
+                      <h3 class="text-center text-success display-4">
+                          {{ dor }}
+                      </h3>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="card box-wn">
+                  <div class="card-body">
+                    <h3 class="text-center card-title text-warning">
+                        Drivers Not On Today
+                    </h3>
+                      <hr>
+                      <h3 class="text-center text-warning display-4">
+                          {{ dnor }}
+                      </h3>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="card box-dg">
+                  <div class="card-body">
+                    <h3 class="text-center card-title text-danger">
+                        Drivers On Leave Today
+                    </h3>
+                      <hr>
+                      <h3 class="text-center text-danger display-4">
+                          {{ dol }}
+                      </h3>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'includes/admin-modals.inc.html' %}
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

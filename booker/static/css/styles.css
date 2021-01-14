@@ -1,0 +1,85 @@
+#login-header{
+    min-height: 100vh;
+    background: #19657e;
+}
+.navbar{
+    border-bottom: rgb(255, 248, 0) solid 1px;
+}
+
+.card{
+    border-radius: 0;
+}
+
+.btn{
+    border-radius: 0;
+}
+.bg-me{
+    background: #19657e;
+    color: #fff;
+}
+
+.form-control{
+    border-radius: 0;
+}
+
+#login-header .form-control{
+    height: 8vh;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border: 2px solid #19657e !important;
+}
+
+.text-me{
+    color: #19657e;
+}
+
+.dropdown-menu{
+    border-radius: 0;
+    margin-left: -6vw;
+}
+.cards-row{
+    margin-top: 5vh;
+}
+
+.cards-row .card{
+    min-height: 30vh;
+    background: #1b1e21 !important;
+    color: #FFFFCC;
+    transition: ease-in-out 0.3s;
+    margin-bottom: 2vh;
+}
+
+.box-dg{
+    box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.5);
+}
+
+.box-wn{
+    box-shadow: 5px 5px 10px rgba(255, 242, 0, 0.5);
+}
+
+.box-ss{
+    box-shadow: 5px 5px 10px rgba(76, 255, 0, 0.5);
+}
+
+.box-pm{
+    box-shadow: 5px 5px 10px rgba(0, 137, 255, 0.5);
+}
+
+.cards-row .card:hover{
+    box-shadow: none;
+    transition: ease-in-out 0.3s;
+}
+
+.cards-row hr{
+    background-color: #fff;
+}
+
+.cards-row h3{
+    font-weight: lighter;
+}
+
+.btn:focus{
+    box-shadow: none;
+}
